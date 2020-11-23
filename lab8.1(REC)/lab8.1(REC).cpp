@@ -1,5 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
+﻿#include <iostream>
 #include <Windows.h>
 
 using namespace std;
@@ -57,7 +56,7 @@ char* modified(char* str, char* t, int i, char* tmp)
 			str[i + 3] == 'l' &&
 			str[i + 4] == 'e')
 		{
-			strcat(t, "***");
+			strcat_s(t, sizeof(str),  "***");
 			return modified(str, t + 3, i + 5, tmp);
 		}
 		else
